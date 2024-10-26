@@ -1,0 +1,145 @@
+2024-10-25 11:10:58,752 - INFO - Using device: cpu
+2024-10-25 11:10:58,753 - INFO - Configuration initialized
+2024-10-25 11:10:58,753 - INFO - Batch size: 8
+2024-10-25 11:10:58,753 - INFO - Number of epochs: 100
+2024-10-25 11:10:58,753 - INFO - Creating dataloaders...
+2024-10-25 11:10:58,753 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:10:58,784 - ERROR - Error during training: No valid tile directories found in C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+Traceback (most recent call last):
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\test_train.py", line 55, in main
+    train_loader, val_loader, test_loader = create_dataloaders(config)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\data\dataset.py", line 215, in create_dataloaders
+    train_dataset = BigEarthNetDataset(config, 'train')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\data\dataset.py", line 39, in __init__
+    raise FileNotFoundError(f"No valid tile directories found in {self.root_dir}")
+FileNotFoundError: No valid tile directories found in C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:14:39,768 - INFO - Configuration:
+2024-10-25 11:14:39,768 - INFO - Dataset path: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2
+2024-10-25 11:14:39,768 - INFO - Scale factor: 2x
+2024-10-25 11:14:39,768 - INFO - Batch size: 8
+2024-10-25 11:14:39,768 - INFO - Number of epochs: 100
+2024-10-25 11:14:39,768 - INFO - Max samples: 100
+2024-10-25 11:14:39,768 - INFO - Creating dataloaders...
+2024-10-25 11:14:39,769 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:14:39,793 - ERROR - Error during training: No valid tile directories found in C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+Traceback (most recent call last):
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\test_train.py", line 51, in main
+    train_loader, val_loader, test_loader = create_dataloaders(config)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\data\dataset.py", line 195, in create_dataloaders
+    train_dataset = BigEarthNetDataset(config, 'train')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\data\dataset.py", line 43, in __init__
+    raise FileNotFoundError(f"No valid tile directories found in {self.root_dir}")
+FileNotFoundError: No valid tile directories found in C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:21:33,327 - INFO - Configuration:
+2024-10-25 11:21:33,327 - INFO - Dataset path: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2
+2024-10-25 11:21:33,327 - INFO - Scale factor: 2x
+2024-10-25 11:21:33,327 - INFO - Batch size: 8
+2024-10-25 11:21:33,328 - INFO - Number of epochs: 100
+2024-10-25 11:21:33,328 - INFO - Max samples: 100
+2024-10-25 11:21:33,328 - INFO - Creating dataloaders...
+2024-10-25 11:21:33,328 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:21:33,355 - ERROR - Error during training: No valid tile directories found in C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+Traceback (most recent call last):
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\test_train.py", line 51, in main
+    train_loader, val_loader, test_loader = create_dataloaders(config)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\data\dataset.py", line 147, in create_dataloaders
+    train_dataset = BigEarthNetDataset(config, 'train')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\data\dataset.py", line 38, in __init__
+    raise FileNotFoundError(f"No valid tile directories found in {self.root_dir}")
+FileNotFoundError: No valid tile directories found in C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:25:27,243 - INFO - Configuration:
+2024-10-25 11:25:27,243 - INFO - Dataset path: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2
+2024-10-25 11:25:27,243 - INFO - Scale factor: 2x
+2024-10-25 11:25:27,244 - INFO - Batch size: 8
+2024-10-25 11:25:27,244 - INFO - Number of epochs: 100
+2024-10-25 11:25:27,244 - INFO - Max samples: 100
+2024-10-25 11:25:27,244 - INFO - Creating dataloaders...
+2024-10-25 11:25:27,244 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:25:27,270 - INFO - Found 115 tile directories
+2024-10-25 11:30:28,930 - INFO - Found 549488 total patches
+2024-10-25 11:30:29,065 - INFO - Limited to 100 samples
+2024-10-25 11:30:29,065 - INFO - Using 80 patches for train
+2024-10-25 11:30:29,065 - ERROR - Error during training: 'BigEarthNetDataset' object has no attribute '_calculate_band_stats'
+Traceback (most recent call last):
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\test_train.py", line 51, in main
+    train_loader, val_loader, test_loader = create_dataloaders(config)
+                                            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\data\dataset.py", line 156, in create_dataloaders
+    train_dataset = BigEarthNetDataset(config, 'train')
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\kimki\Downloads\SRGAN_Satellite\data\dataset.py", line 83, in __init__
+    self.band_stats = self._calculate_band_stats()
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'BigEarthNetDataset' object has no attribute '_calculate_band_stats'
+2024-10-25 11:37:09,358 - INFO - Configuration:
+2024-10-25 11:37:09,359 - INFO - Dataset path: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2
+2024-10-25 11:37:09,359 - INFO - Scale factor: 2x
+2024-10-25 11:37:09,359 - INFO - Batch size: 8
+2024-10-25 11:37:09,359 - INFO - Number of epochs: 100
+2024-10-25 11:37:09,359 - INFO - Max samples: 100
+2024-10-25 11:37:09,359 - INFO - Creating dataloaders...
+2024-10-25 11:37:09,360 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:37:09,395 - INFO - Found 115 tile directories
+2024-10-25 11:43:28,731 - INFO - Found 549488 total patches
+2024-10-25 11:43:28,909 - INFO - Limited to 100 samples
+2024-10-25 11:43:28,909 - INFO - Using 80 patches for train
+2024-10-25 11:43:28,909 - INFO - Calculating band statistics...
+2024-10-25 11:43:30,442 - INFO - Statistics for B02: {'mean': 386.66776013111155, 'std': 291.5096431714071, 'min': 121.0, 'max': 1356.0}
+2024-10-25 11:43:31,675 - INFO - Statistics for B03: {'mean': 695.7412623470374, 'std': 357.28261406772907, 'min': 274.0, 'max': 1876.0}
+2024-10-25 11:43:32,896 - INFO - Statistics for B04: {'mean': 543.2158589505318, 'std': 457.0922834263859, 'min': 156.0, 'max': 2166.0}
+2024-10-25 11:43:34,191 - INFO - Statistics for B08: {'mean': 3432.3042483007666, 'std': 1074.6256648820474, 'min': 362.0, 'max': 5796.0}
+2024-10-25 11:43:35,204 - INFO - Statistics for B05: {'mean': 1094.483545138889, 'std': 481.77605175919854, 'min': 458.0, 'max': 2575.0}
+2024-10-25 11:43:36,308 - INFO - Statistics for B06: {'mean': 2761.5774151993583, 'std': 800.8033947009966, 'min': 340.0, 'max': 4537.0}
+2024-10-25 11:43:37,386 - INFO - Statistics for B07: {'mean': 3320.9718854166667, 'std': 993.9187539757509, 'min': 388.0, 'max': 5576.0}
+2024-10-25 11:43:38,464 - INFO - Statistics for B11: {'mean': 1862.12328125, 'std': 725.1350443621865, 'min': 229.0, 'max': 3717.0}
+2024-10-25 11:43:39,519 - INFO - Statistics for B12: {'mean': 1077.276582151017, 'std': 632.186494074844, 'min': 142.0, 'max': 3147.0}
+2024-10-25 11:43:40,581 - INFO - Statistics for B8A: {'mean': 3561.4127430555554, 'std': 1043.5210843435598, 'min': 361.0, 'max': 5848.0}
+2024-10-25 11:43:41,682 - INFO - Statistics for B01: {'mean': 383.35575, 'std': 196.01610872435333, 'min': 175.0, 'max': 1046.0}
+2024-10-25 11:43:42,704 - INFO - Statistics for B09: {'mean': 3571.8919375, 'std': 916.570236880402, 'min': 1058.99, 'max': 5635.009999999998}
+2024-10-25 11:43:42,709 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:43:42,743 - INFO - Found 115 tile directories
+2024-10-25 11:50:11,766 - INFO - Found 549488 total patches
+2024-10-25 11:50:11,898 - INFO - Limited to 100 samples
+2024-10-25 11:50:11,900 - INFO - Using 10 patches for val
+2024-10-25 11:50:11,900 - INFO - Calculating band statistics...
+2024-10-25 11:50:12,081 - INFO - Statistics for B02: {'mean': 379.32209027777776, 'std': 268.97180901086114, 'min': 112.0, 'max': 1356.0}
+2024-10-25 11:50:12,252 - INFO - Statistics for B03: {'mean': 692.6511111111112, 'std': 348.03682342117014, 'min': 276.0, 'max': 2002.0}
+2024-10-25 11:50:12,417 - INFO - Statistics for B04: {'mean': 511.81022916666666, 'std': 449.61205951733507, 'min': 151.0, 'max': 2316.0}
+2024-10-25 11:50:12,572 - INFO - Statistics for B08: {'mean': 3620.637201388889, 'std': 1177.476377963435, 'min': 258.0, 'max': 6032.0}
+2024-10-25 11:50:12,699 - INFO - Statistics for B05: {'mean': 1076.4001666666666, 'std': 486.4534854204973, 'min': 392.0, 'max': 2814.0}
+2024-10-25 11:50:12,851 - INFO - Statistics for B06: {'mean': 2899.1283333333336, 'std': 881.7987680351642, 'min': 237.0, 'max': 4746.0}
+2024-10-25 11:50:13,046 - INFO - Statistics for B07: {'mean': 3532.8634722222223, 'std': 1095.98103159232, 'min': 280.99, 'max': 5891.0}
+2024-10-25 11:50:13,194 - INFO - Statistics for B11: {'mean': 1820.106361111111, 'std': 703.3070878148801, 'min': 165.0, 'max': 4011.030000000006}
+2024-10-25 11:50:13,349 - INFO - Statistics for B12: {'mean': 1017.1377222222222, 'std': 624.6950591460431, 'min': 94.0, 'max': 3490.0}
+2024-10-25 11:50:13,500 - INFO - Statistics for B8A: {'mean': 3750.6884444444445, 'std': 1150.2979724304396, 'min': 257.99, 'max': 6115.030000000006}
+2024-10-25 11:50:13,645 - INFO - Statistics for B01: {'mean': 374.996, 'std': 174.69662413452642, 'min': 172.0, 'max': 994.0899999999979}
+2024-10-25 11:50:13,793 - INFO - Statistics for B09: {'mean': 3773.40075, 'std': 971.7230508995027, 'min': 867.0, 'max': 5837.529999999988}
+2024-10-25 11:50:13,797 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:50:13,835 - INFO - Found 115 tile directories
+2024-10-25 11:56:16,441 - INFO - Configuration:
+2024-10-25 11:56:16,441 - INFO - Dataset path: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2
+2024-10-25 11:56:16,441 - INFO - Scale factor: 2x
+2024-10-25 11:56:16,442 - INFO - Batch size: 8
+2024-10-25 11:56:16,442 - INFO - Number of epochs: 100
+2024-10-25 11:56:16,442 - INFO - Max samples: 100
+2024-10-25 11:56:16,442 - INFO - Creating dataloaders...
+2024-10-25 11:56:16,442 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 11:56:16,480 - INFO - Found 115 tile directories
+2024-10-25 12:01:32,141 - INFO - Found 549488 total patches
+2024-10-25 12:01:32,250 - INFO - Limited to 100 samples
+2024-10-25 12:01:32,250 - INFO - Using 80 patches for train
+2024-10-25 12:01:32,250 - INFO - Loading cached band statistics
+2024-10-25 12:01:32,260 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 12:01:32,281 - INFO - Found 115 tile directories
+2024-10-25 12:07:04,096 - INFO - Found 549488 total patches
+2024-10-25 12:07:04,247 - INFO - Limited to 100 samples
+2024-10-25 12:07:04,247 - INFO - Using 10 patches for val
+2024-10-25 12:07:04,248 - INFO - Loading cached band statistics
+2024-10-25 12:07:04,261 - INFO - Loading dataset from: C:\Users\kimki\Downloads\SRGAN_Satellite\BigEarthNet-S2\BigEarthNet-S2
+2024-10-25 12:07:04,285 - INFO - Found 115 tile directories

@@ -1,0 +1,4 @@
+__pycache__/
+*.venv
+BigEarthNet-S2/
+train.py 
