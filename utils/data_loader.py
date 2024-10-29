@@ -1,5 +1,5 @@
 import torch
-from torch.utils.data import Dataset, DataLoader, random_split
+from torch.utils.data import Dataset, DataLoader, random_split 
 from pathlib import Path
 import rasterio
 import numpy as np
@@ -41,21 +41,20 @@ class BigEarthNetSRDataset(Dataset):
         print(f"\nFound {len(self.patches)} patches")
 
     def normalize_bands(self, bands, resolution):
-        """Enhanced normalization"""
+        """Improved normalization to prevent clipping"""
         bands = np.array(bands)
         mean = np.array(self.norm_params[resolution]['mean'])
         std = np.array(self.norm_params[resolution]['std'])
         
-        
-        #Normalize to zero mean and unit variance
+        # Normalize to zero mean and unit variance
         normalized = (bands - mean[:, None, None]) / (std[:, None, None] + 1e-8)
-    
+        
         # Clip outliers
         normalized = np.clip(normalized, -3, 3)
-    
+        
         # Scale to [-1, 1] range
         normalized = normalized / 3.0
-    
+        
         return normalized
 
     def apply_augmentation(self, bands_dict):

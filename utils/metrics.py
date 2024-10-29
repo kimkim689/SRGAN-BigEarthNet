@@ -5,6 +5,7 @@ from math import exp
 from torchvision.models import inception_v3, Inception_V3_Weights
 import numpy as np
 from scipy import linalg
+import matplotlib.pyplot as plt  # Added this import
 
 class EvaluationMetrics:
     def __init__(self, device=None):
@@ -23,8 +24,9 @@ class EvaluationMetrics:
         # Remove last linear layer
         self.inception.fc = nn.Identity()
 
+        # Add MSE loss
         self.mse_loss = nn.MSELoss()
-    
+
     def calculate_mse(self, sr, hr):
         """Mean Squared Error"""
         return self.mse_loss(sr, hr).item()
@@ -43,7 +45,7 @@ class EvaluationMetrics:
         return window
 
     def calculate_psnr(self, sr, hr):
-        """Peak Signal-to-Noise Ratio"""
+        """Peak Signal-to-Noise Ratio with MSE"""
         mse = self.calculate_mse(sr, hr)
         if mse == 0:
             return float('inf')
@@ -117,4 +119,44 @@ class EvaluationMetrics:
             }
         return metrics
 
-    
+    def print_metrics(self, metrics, prefix=""):
+        """Pretty print metrics with proper formatting"""
+        print(f"\n{prefix}Metrics:")
+        print(f"MSE: {metrics['MSE']:.4f}")
+        print(f"PSNR: {metrics['PSNR']:.4f} dB")
+        print(f"SSIM: {metrics['SSIM']:.4f}")
+        print(f"FID: {metrics['FID']:.4f}")
+
+    def visualize_batch_comparison(self, sr, hr, save_path=None):
+        """Visualize and optionally save comparison between SR and HR images"""
+        # Convert tensors to numpy arrays and move to CPU
+        sr_np = sr.cpu().numpy()
+        hr_np = hr.cpu().numpy()
+        
+        # Take first image from batch and first 3 channels
+        sr_img = sr_np[0, :3].transpose(1, 2, 0)
+        hr_img = hr_np[0, :3].transpose(1, 2, 0)
+        
+        # Normalize to [0, 1] for visualization
+        sr_img = (sr_img + 1) / 2
+        hr_img = (hr_img + 1) / 2
+        
+        # Create figure
+        fig, (ax1, ax2) = plt.subplots(1, 2, figsize=(12, 6))
+        
+        # Plot images
+        ax1.imshow(sr_img)
+        ax1.set_title('Super-Resolution')
+        ax1.axis('off')
+        
+        ax2.imshow(hr_img)
+        ax2.set_title('High-Resolution (Ground Truth)')
+        ax2.axis('off')
+        
+        plt.tight_layout()
+        
+        if save_path:
+            plt.savefig(save_path)
+            plt.close()
+        else:
+            plt.show()
